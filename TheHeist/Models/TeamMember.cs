@@ -21,7 +21,15 @@ namespace TheHeist.Models
         public int SkillLevel { get; set; }
         public decimal CourageFactor { get; set; }
 
-        public void Print()
+        public override string ToString()
+        {
+            return $@"
+Name: {Name}
+Skill Level: {SkillLevel}
+Courage: {CourageFactor}
+";
+        }
+        public void Print() //override
         {
             Console.WriteLine($@"
 Name: {Name}
